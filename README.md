@@ -1,4 +1,4 @@
-# Rimworld-BetterElectronics
+# Better Electronics
 
 This is a mod for rimworld.
 
