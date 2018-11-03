@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
-	<NoBreakdowns.Enabled>Brak losowych awarii komponentów</NoBreakdowns.Enabled>
+	<NoBreakdowns.Enabled>Brak losowych awarii</NoBreakdowns.Enabled>
 	<NoBreakdowns.Enabled.Alt>Możesz włączyć spowrotem awarie, na wypadek gdyby ich wyłączenie powodowało problem lub niekompatybilność z inną modyfikacją.</NoBreakdowns.Enabled.Alt>
 </LanguageData>
