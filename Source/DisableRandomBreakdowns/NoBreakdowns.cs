@@ -16,7 +16,7 @@ namespace BetterElectronics
 
         public override void Initialize()
         {
-            no_breakdowns_enabled = Settings.GetHandle<bool>("no_breakdown_enabled", "NoBreakdowns.Enabled".Translate(), /*"You can disable random breakdown disabler just incase it causes problem or incompatibility."*/"NoBreakdowns.Enabled.Alt".Translate(), true);
+            no_breakdowns_enabled = Settings.GetHandle<bool>("no_breakdown_enabled", "NoBreakdowns.Enabled".Translate(), "NoBreakdowns.Enabled.Alt".Translate(), true);
         }
     }
 
