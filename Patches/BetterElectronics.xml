@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	
+	<!-- no random shortcircuit -->
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="BetterElectronics.IsNoShortCircuitsEnabled"><success>Invert</success></li>
+			<li Class="PatchOperationReplace">
+				<xpath>*/IncidentDef[defName = "ShortCircuit"]/baseChance</xpath>
+				<value>
+					<baseChance>0</baseChance>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	
+	<!-- no solar flare -->
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="BetterElectronics.IsNoSolarFlareEnabled"><success>Invert</success></li>
+			<li Class="PatchOperationReplace">
+				<xpath>*/IncidentDef[defName = "SolarFlare"]/baseChance</xpath>
+				<value>
+					<baseChance>0</baseChance>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	
+</Patch>
