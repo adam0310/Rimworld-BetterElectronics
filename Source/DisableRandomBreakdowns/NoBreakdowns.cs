@@ -13,29 +13,33 @@ namespace BetterElectronics
     {
         public override string ModIdentifier => "BetterElectronics";
 
-        public static bool no_breakdowns_enabled;
-        public static bool no_solar_flare_enabled;
-        public static bool no_short_circuits_enabled;
+        public static SettingHandle<bool> no_breakdowns_enabled;
+        public static SettingHandle<bool> no_solar_flare_enabled;
+        public static SettingHandle<bool> no_short_circuits_enabled;
         
         public override void EarlyInitalize()
         {
-            no_breakdowns_enabled = GetSetting("no_breakdowns_enabled");
-            no_solar_flare_enabled = GetSetting("no_solar_flare_enabled");
-            no_short_circuits_enabled = GetSetting("no_short_circuits_enabled");
+            no_breakdowns_enabled = GetSettingHandle<bool>("no_breakdowns_enabled", "NoBreakdowns.Enabled", true);
+            no_solar_flare_enabled = GetSettingHandle<bool>("no_solar_flare_enabled", "NoSolarFlare.Enabled", true);
+            no_short_circuits_enabled = GetSettingHandle<bool>("no_short_circuits_enabled", "NoShortCircuits.Enabled", true);
         }
         
         public override void Initialize()
         {
-            no_breakdowns_enabled = Settings.GetHandle<bool>("no_breakdowns_enabled", "BetterElectronics.NoBreakdowns.Enabled".Translate(), "BetterElectronics.NoBreakdowns.Enabled.Alt".Translate(), true);
-            no_solar_flare_enabled = Settings.GetHandle<bool>("no_solar_flare_enabled", "BetterElectronics.NoSolarFlare.Enabled".Translate(), "BetterElectronics.NoSolarFlare.Enabled.Alt".Translate(), true);
-            no_short_circuits_enabled = Settings.GetHandle<bool>("no_short_circuits_enabled", "BetterElectronics.NoShortCircuits.Enabled".Translate(), "BetterElectronics.NoShortCircuits.Enabled.Alt".Translate(), true);
+            TranslateSetting(no_breakdowns_enabled);
+            TranslateSetting(no_solar_flare_enabled);
+            TranslateSetting(no_short_circuits_enabled);
         }
 
-        private bool GetSetting(string settingName)
+        private SettingHandle<T> GetSettingHandle<T>(string settingName, string def, T defaultValue)
         {
-            if (Settings.ValueExists(settingName))
-                return Convert.ToBoolean(Settings.PeekValue(settingName));
-            return true;
+            return Settings.GetHandle<T>(settingName, "BetterElectronics." + def, "BetterElectronics." + def + ".Alt", defaultValue);
+        }
+
+        private void TranslateSetting<T>(SettingHandle<T> settingHandle)
+        {
+            settingHandle.Title = settingHandle.Title.Translate();
+            settingHandle.Description = settingHandle.Description.Translate();
         }
     }
 
