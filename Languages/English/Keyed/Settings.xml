@@ -4,6 +4,6 @@
 	<BetterElectronics.NoBreakdowns.Enabled.Alt>You can disable random breakdowns disabler. Requires restart.</BetterElectronics.NoBreakdowns.Enabled.Alt>
 	<BetterElectronics.NoSolarFlare.Enabled>No Solar Flare</BetterElectronics.NoSolarFlare.Enabled>
 	<BetterElectronics.NoSolarFlare.Enabled.Alt>You can disable solar flare disabler. Requires restart.</BetterElectronics.NoSolarFlare.Enabled.Alt>
-	<BetterElectronics.NoShortCircuits.Enabled>No Short Circuits</BetterElectronics.NoShortCircuits.Enabled>
+	<BetterElectronics.NoShortCircuits.Enabled>No Random Short Circuits</BetterElectronics.NoShortCircuits.Enabled>
 	<BetterElectronics.NoShortCircuits.Enabled.Alt>You can disable short circuits disabler. Requires restart.</BetterElectronics.NoShortCircuits.Enabled.Alt>
 </LanguageData>

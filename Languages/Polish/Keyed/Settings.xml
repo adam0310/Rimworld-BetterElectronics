@@ -4,6 +4,6 @@
 	<BetterElectronics.NoBreakdowns.Enabled.Alt>Możesz włączyć awarie spowrotem. Wymaga restartu gry.</BetterElectronics.NoBreakdowns.Enabled.Alt>
 	<BetterElectronics.NoSolarFlare.Enabled>Brak Rozbłysków Słonecznych</BetterElectronics.NoSolarFlare.Enabled>
 	<BetterElectronics.NoSolarFlare.Enabled.Alt>Możesz włączyć rozbłyski słoneczne spowrotem. Wymaga restartu gry.</BetterElectronics.NoSolarFlare.Enabled.Alt>
-	<BetterElectronics.NoShortCircuits.Enabled>Brak Zwarć</BetterElectronics.NoShortCircuits.Enabled>
+	<BetterElectronics.NoShortCircuits.Enabled>Brak Losowych Zwarć</BetterElectronics.NoShortCircuits.Enabled>
 	<BetterElectronics.NoShortCircuits.Enabled.Alt>Możesz włączyć zwarcia spowrotem. Wymaga restartu gry.</BetterElectronics.NoShortCircuits.Enabled.Alt>
 </LanguageData>
