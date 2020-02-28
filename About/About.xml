@@ -2,7 +2,10 @@
 <ModMetaData>
 	<name>Better Electronics</name>
 	<author>adam0310</author>
-	<targetVersion>1.0.0</targetVersion>
+	<supportedVersions>
+		<li>1.0</li>
+		<li>1.1</li>
+	</supportedVersions>
 	<description>Electronics will never breakdown!
 Prevents random short circuits!
 Prevents solar flare!
@@ -19,5 +22,16 @@ Polish
 
 GitHub: https://github.com/adam0310/Rimworld-BetterElectronics
 Original mod by Dazz Aephiex: https://steamcommunity.com/sharedfiles/filedetails/?id=1302867750
-</description>
+	</description>
+	<modDependencies>
+		<li>
+			<packageId>UnlimitedHugs.HugsLib</packageId>
+			<displayName>HugsLib</displayName>
+			<downloadUrl>https://github.com/UnlimitedHugs/RimworldHugsLib/releases/latest</downloadUrl>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/818773962</steamWorkshopUrl>
+		</li>
+	</modDependencies>
+	<loadAfter>
+		<li>UnlimitedHugs.HugsLib</li>
+	</loadAfter>
 </ModMetaData>
