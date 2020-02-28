@@ -4,7 +4,7 @@ using Verse;
 using RimWorld;
 using HugsLib;
 using HugsLib.Settings;
-using Harmony;
+using HarmonyLib;
 
 namespace BetterElectronics
 {
@@ -17,7 +17,7 @@ namespace BetterElectronics
         public static SettingHandle<bool> no_solar_flare_enabled;
         public static SettingHandle<bool> no_short_circuits_enabled;
         
-        public override void EarlyInitalize()
+        public override void EarlyInitialize()
         {
             no_breakdowns_enabled = GetSettingHandle<bool>("no_breakdowns_enabled", "NoBreakdowns.Enabled", true);
             no_solar_flare_enabled = GetSettingHandle<bool>("no_solar_flare_enabled", "NoSolarFlare.Enabled", true);
